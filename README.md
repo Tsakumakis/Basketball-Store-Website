@@ -73,11 +73,10 @@
 
     <script>
         const products = [
-            { id: 1, name: "Pro Basketball",         price: 49.99,  stock: 24, emoji: "🏀" },
-            { id: 2, name: "Basketball Hoop (10ft)", price: 199.99, stock: 8,  emoji: "🏀" },
-            { id: 3, name: "Athletic Shorts",        price: 29.99,  stock: 50, emoji: "🩳" },
-            { id: 5, name: "Sports Water Bottle",    price: 19.99,  stock: 60, emoji: "🧴" },
-            { id: 6, name: "Knee Brace Support",     price: 24.99,  stock: 30, emoji: "🦵" },
+            { id: 1, name: "Basketball",         price: 49.99,  stock: 24, image: "https://github.com/Tsakumakis/Basketball-Store-Website/blob/main/OIP-2687664637.jpg?raw=true" },
+            { id: 2, name: "Athletic Shorts",        price: 29.99,  stock: 50, image: "https://github.com/Tsakumakis/Basketball-Store-Website/blob/main/OIP-639133713.jpg?raw=true" },
+            { id: 3, name: "Sports Water Bottle",    price: 19.99,  stock: 60, image: "https://github.com/Tsakumakis/Basketball-Store-Website/blob/main/OIP-2791108295.jpg?raw=true" },
+            { id: 4, name: "Knee Brace Support",     price: 24.99,  stock: 30, image: "https://github.com/Tsakumakis/Basketball-Store-Website/blob/main/OIP-1154291207.jpg?raw=true" },
         ];
 
         const cart = {};
@@ -94,7 +93,7 @@
             const grid = document.getElementById('productGrid');
             grid.innerHTML = products.map(p => `
                 <div class="product-card">
-                    <div class="product-image">${p.emoji}</div>
+                    <div class="product-image"><img src="${p.image}" alt="${p.name}" style="width:100%;height:100%;object-fit:contain;"></div>
                     <div class="product-info">
                         <div class="product-name">${p.name}</div>
                         <div class="product-price">$${p.price.toFixed(2)}</div>
